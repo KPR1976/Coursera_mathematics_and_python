@@ -13,8 +13,9 @@ DONE Запишите полученные числа в файл, раздел�
 import re
 import numpy as np
 import scipy.spatial.distance as ssd
-file = open('sentences.txt')
-text = file.read().lower()
+file = open('sentences.txt', 'r')
+text = file.readlines()
+print(text)
 words = re.split('[^a-z]', text)
 only = []
 for i in range(0, len(words)):
