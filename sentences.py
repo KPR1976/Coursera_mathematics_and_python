@@ -16,7 +16,13 @@ import scipy.spatial.distance as ssd
 file = open('sentences.txt', 'r')
 text = file.readlines()
 print(text)
-words = re.split('[^a-z]', text)
+
+for sentence in text:
+    words = re.split('[^a-z]', sentence.lower())
+print(words)
+words = [x for x in words if len(x) > 0]
+print(words)
+# TODO split sentence to words and change another parts
 only = []
 for i in range(0, len(words)):
     if len(words[i]) > 0 and only.count(words[i]) == 0:
