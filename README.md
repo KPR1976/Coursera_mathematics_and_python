@@ -1,1 +1,1 @@
-# Coursera_mathematics_and_python
+Coursera_mathematics_and_python exercises
